@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2181745443639967408}
   - component: {fileID: 5604264895550768053}
+  - component: {fileID: 5254675936501382843}
+  - component: {fileID: 4930304755583360266}
   m_Layer: 0
   m_Name: monster_3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +86,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &5254675936501382843
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397675379842058375}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.25, y: 4.95}
+    newSize: {x: 4.25, y: 4.95}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.25, y: 4.95}
+  m_EdgeRadius: 0
+--- !u!114 &4930304755583360266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397675379842058375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9231eb4262cae5840b58e18d57ba0ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageEffectDuration: 0.5
+  DamageEffectCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.11833304
+      value: 0.96661586
+      inSlope: -3.2926996
+      outSlope: -3.2926996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.046467338
+    - serializedVersion: 3
+      time: 1
+      value: -0.000001007691
+      inSlope: -0.050319858
+      outSlope: -0.050319858
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22321278
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4547101196184645031
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +255,7 @@ GameObject:
   - component: {fileID: 2971959155423628584}
   m_Layer: 0
   m_Name: Giant Sprites
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,9 +311,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1474568817370705452}
   - component: {fileID: 7223590825251755127}
+  - component: {fileID: 4008695253621348619}
+  - component: {fileID: 1740901925921109383}
   m_Layer: 0
   m_Name: monster_2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +375,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1243593339, guid: fd1983626f195fd4da476df1349441c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -311,6 +387,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4008695253621348619
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908788261857794460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.79277134, y: -0.8879044}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14, y: 9.65}
+    newSize: {x: 14, y: 9.65}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.835306, y: 1.9548297}
+  m_EdgeRadius: 0
+--- !u!114 &1740901925921109383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908788261857794460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9231eb4262cae5840b58e18d57ba0ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageEffectDuration: 0.5
+  DamageEffectCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.11833304
+      value: 0.96661586
+      inSlope: -3.2926996
+      outSlope: -3.2926996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.046467338
+    - serializedVersion: 3
+      time: 1
+      value: -0.000001007691
+      inSlope: -0.050319858
+      outSlope: -0.050319858
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22321278
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5413402958518949360
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,9 +469,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7044117750208437150}
   - component: {fileID: 644495004192742833}
+  - component: {fileID: 1445565641432452570}
+  - component: {fileID: 6466928259140967367}
   m_Layer: 0
   m_Name: monster_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,6 +545,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1445565641432452570
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413402958518949360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.093804836, y: -0.0055639744}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.95, y: 5.4}
+    newSize: {x: 6.95, y: 5.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.267003, y: 2.6322389}
+  m_EdgeRadius: 0
+--- !u!114 &6466928259140967367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413402958518949360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9231eb4262cae5840b58e18d57ba0ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageEffectDuration: 0.5
+  DamageEffectCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.11833304
+      value: 0.96661586
+      inSlope: -3.2926996
+      outSlope: -3.2926996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.046467338
+    - serializedVersion: 3
+      time: 1
+      value: -0.000001007691
+      inSlope: -0.050319858
+      outSlope: -0.050319858
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22321278
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8102033816856726868
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,9 +627,11 @@ GameObject:
   m_Component:
   - component: {fileID: 324827178917235927}
   - component: {fileID: 6189716167134930378}
+  - component: {fileID: 374934047252294360}
+  - component: {fileID: 2766057444154706470}
   m_Layer: 0
   m_Name: monster_4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,6 +703,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &374934047252294360
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102033816856726868}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.1, y: 5}
+    newSize: {x: 4.1, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.1, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &2766057444154706470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102033816856726868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9231eb4262cae5840b58e18d57ba0ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageEffectDuration: 0.5
+  DamageEffectCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.11833304
+      value: 0.96661586
+      inSlope: -3.2926996
+      outSlope: -3.2926996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.046467338
+    - serializedVersion: 3
+      time: 1
+      value: -0.000001007691
+      inSlope: -0.050319858
+      outSlope: -0.050319858
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22321278
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8427893816037112505
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,9 +785,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5437923302482989595}
   - component: {fileID: 8347800248530287464}
+  - component: {fileID: 8462713554469872586}
+  - component: {fileID: 6010757236017905685}
   m_Layer: 0
   m_Name: monster_5
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -563,6 +861,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8462713554469872586
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427893816037112505}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04228115, y: 0.031710863}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.25, y: 6.4}
+    newSize: {x: 6.25, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.176261, y: 5.786923}
+  m_EdgeRadius: 0
+--- !u!114 &6010757236017905685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427893816037112505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9231eb4262cae5840b58e18d57ba0ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageEffectDuration: 0.5
+  DamageEffectCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.11833304
+      value: 0.96661586
+      inSlope: -3.2926996
+      outSlope: -3.2926996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.046467338
+    - serializedVersion: 3
+      time: 1
+      value: -0.000001007691
+      inSlope: -0.050319858
+      outSlope: -0.050319858
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22321278
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8715381270019458964
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,9 +943,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4301361778695067867}
   - component: {fileID: 7428338550479494940}
+  - component: {fileID: 2753266422264274872}
+  - component: {fileID: 7394494493707436619}
   m_Layer: 0
   m_Name: monster_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -647,3 +1019,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2753266422264274872
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715381270019458964}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.65, y: 9.3}
+    newSize: {x: 7.65, y: 9.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6, y: 8}
+  m_EdgeRadius: 0
+--- !u!114 &7394494493707436619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715381270019458964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9231eb4262cae5840b58e18d57ba0ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageEffectDuration: 0.5
+  DamageEffectCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.11833304
+      value: 0.96661586
+      inSlope: -3.2926996
+      outSlope: -3.2926996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.046467338
+    - serializedVersion: 3
+      time: 1
+      value: -0.000001007691
+      inSlope: -0.050319858
+      outSlope: -0.050319858
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22321278
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

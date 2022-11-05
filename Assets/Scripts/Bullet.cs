@@ -41,11 +41,13 @@ public class Bullet : Actor {
     private void OnTriggerEnter2D(Collider2D col) {
         if (!belongsToPlayer && col.gameObject.CompareTag("Player"))
         {
+            col.SendMessage("ApplyDamage");
             Die();
         }
 
         if (belongsToPlayer && col.gameObject.CompareTag("Enemy"))
         {
+            col.SendMessage("ApplyDamage");
             Die();
         }
     }

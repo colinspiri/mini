@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f308c60cb92af3f409c35e1d834dfdcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraShakeTestKey: 32
+  cameraShakeTestKey: 106
 --- !u!1 &2811774711215314189
 GameObject:
   m_ObjectHideFlags: 0

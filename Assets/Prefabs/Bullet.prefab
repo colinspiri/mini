@@ -139,4 +139,5 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 50
   direction: {x: 0, y: 0, z: 0}
+  lifeTime: 3
   belongsToPlayer: 0

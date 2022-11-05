@@ -15,8 +15,9 @@ public class CameraMovement : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        // follow object
-        Vector3 newPos = Vector3.Lerp(transform.position, objectToFollow.transform.position + offset, followSpeed * Time.deltaTime);
-        transform.position = newPos;
+        if (objectToFollow) {
+            Vector3 newPos = Vector3.Lerp(transform.position, objectToFollow.transform.position + offset, followSpeed * Time.deltaTime);
+            transform.position = newPos;
+        }
     }
 }

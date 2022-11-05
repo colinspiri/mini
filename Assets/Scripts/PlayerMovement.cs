@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
     // components
+    public static PlayerMovement Instance;
     private Rigidbody2D rb;
     
     // constants
     public float speed;
 
     // state
-    private Vector3 direction;
+    public Vector3 direction;
 
-    
     private void Awake() {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -35,4 +36,14 @@ public class PlayerMovement : MonoBehaviour {
     private void FixedUpdate() {
         rb.velocity = speed * direction;
     }
+    
+
+    /*private void OnCollisionEnter2D(Collision2D col) {
+        if (col.gameObject.TryGetComponent(out Bullet bullet)) {
+            if (!bullet.belongsToPlayer) {
+                // die
+                Destroy(gameObject);
+            }
+        }
+    }*/
 }

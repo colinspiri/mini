@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour {
     public float speed;
 
     // state
-    public Vector3 direction;
+    public Vector3 movementDirection;
+    public Vector3 aimDirection;
 
     private void Awake() {
         Instance = this;
@@ -29,12 +30,24 @@ public class PlayerMovement : MonoBehaviour {
     void Update() {
         float vertical = Input.GetAxisRaw("Vertical");
         float horizontal = Input.GetAxisRaw("Horizontal");
-        direction = new Vector3(horizontal, vertical, 0);
-        direction.Normalize();
+        movementDirection = new Vector3(horizontal, vertical, 0);
+        movementDirection.Normalize();
+        
+        Vector3 tempMousePos = Input.mousePosition;
+        tempMousePos.z = Camera.main.nearClipPlane;
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(tempMousePos);
+        // Get Angle in Radians
+        float AngleRad = Mathf.Atan2(mousePosition.y - transform.position.y, mousePosition.x - transform.position.x);
+        // Get Angle in Degrees
+        float AngleDeg = (180 / Mathf.PI) * AngleRad;
+        // Rotate Object
+        transform.rotation = Quaternion.Euler(0, 0, AngleDeg);
+        aimDirection = mousePosition - transform.position;
+        aimDirection.Normalize();
     }
 
     private void FixedUpdate() {
-        rb.velocity = speed * direction;
+        rb.velocity = speed * movementDirection;
     }
     
 

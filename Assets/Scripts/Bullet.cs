@@ -4,28 +4,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
+    // components
+    public Rigidbody2D rb;
+    
     // constants
     public float speed;
     public Vector3 direction;
     
     // state
     public bool belongsToPlayer;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    private void Awake() {
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void InitializeBullet(Vector3 bulletDirection, bool bulletBelongsToPlayer) {
-        direction = new Vector3(bulletDirection.x, bulletDirection.y, bulletDirection.z);
-        belongsToPlayer = bulletBelongsToPlayer;
+    // Start is called before the first frame update
+    void Start() {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        transform.Translate(speed * Time.deltaTime * direction);
+    void Update() {
+        rb.velocity = speed * direction;
     }
 
     private void OnTriggerEnter2D(Collider2D col) {

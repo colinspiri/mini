@@ -21,7 +21,7 @@ public class PlayerSize : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKey(shrinkKey)) {
+        if (Input.GetMouseButton(0)) {
             if(currentSize > minSize) currentSize -= shrinkSpeed * Time.deltaTime;
         }
         else {

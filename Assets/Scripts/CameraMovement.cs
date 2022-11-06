@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
     public GameObject objectToFollow;
-    private float followSpeed = 2f;
-
-    private Vector3 offset;
-
+    private float followSpeed = 5f;
+    public float lookAheadMultiplier;
+    
     static CameraMovement INSTANCE;
 
     private void Awake()
@@ -22,12 +21,13 @@ public class CameraMovement : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        offset = transform.position - objectToFollow.transform.position;
     }
 
     void Update() {
         if (objectToFollow) {
-            Vector3 newPos = Vector3.Lerp(transform.position, objectToFollow.transform.position + offset, followSpeed * Time.deltaTime);
+            Vector3 targetPos = objectToFollow.transform.position +
+                                lookAheadMultiplier * PlayerMovement.Instance.transform.localScale.x * PlayerMovement.Instance.aimDirection;
+            Vector3 newPos = Vector3.Lerp(transform.position, targetPos, 1);
             transform.position = newPos;
         }
     }

@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397675379842058375}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5114269, y: -5.2855234, z: 0}
+  m_LocalPosition: {x: -1.511427, y: -5.2855234, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -203,7 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49324e45bc832b4c8b3b45d73f9a76b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootKey: 0
   bulletProviderObject: {fileID: 0}
   gunNozzle: {fileID: 2708876614469095109}
   shootAtPlayerDelay: 0.5
@@ -498,7 +497,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1831907579, guid: fd1983626f195fd4da476df1349441c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -640,7 +639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8102033816856726868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3570681, y: -5.4799976, z: 0}
+  m_LocalPosition: {x: 1.357068, y: -5.4799976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

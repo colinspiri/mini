@@ -19,6 +19,7 @@ public class Hurtbox : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(CR_PlayDamageEffect());
+        StartCoroutine(CameraShake.Instance.Shake(0.05f));
         //CameraMovement.ScreenShake(0.2f, 0.1f);
     }
 

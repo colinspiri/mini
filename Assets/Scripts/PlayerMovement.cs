@@ -49,14 +49,4 @@ public class PlayerMovement : MonoBehaviour {
     private void FixedUpdate() {
         rb.velocity = speed * movementDirection;
     }
-    
-
-    /*private void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.TryGetComponent(out Bullet bullet)) {
-            if (!bullet.belongsToPlayer) {
-                // die
-                Destroy(gameObject);
-            }
-        }
-    }*/
 }

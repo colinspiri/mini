@@ -206,6 +206,10 @@ MonoBehaviour:
   bulletProviderObject: {fileID: 0}
   gunNozzle: {fileID: 2708876614469095109}
   shootAtPlayerDelay: 0.5
+  shootWaveDelay: 0.1
+  shootWaveMinAngle: 0
+  shootWaveMaxAngle: 180
+  shootWaveIncrease: 10
 --- !u!1 &4724918177657956829
 GameObject:
   m_ObjectHideFlags: 0

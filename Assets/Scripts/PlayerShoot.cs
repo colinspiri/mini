@@ -4,7 +4,6 @@ using UnityEditor;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
-    public KeyCode shootKey;
     public GameObject bulletProviderObject;
     public Transform spawnPosition;
     public float shootDelay;
@@ -27,7 +26,7 @@ public class PlayerShoot : MonoBehaviour {
             return;
         }
         
-        if (Input.GetKey(shootKey)) { 
+        if (Input.GetMouseButton(0)) { 
             ShootBullet();
             shootCooldown = shootDelay;
         }

@@ -209,7 +209,7 @@ MonoBehaviour:
   shootWaveDelay: 0.1
   shootWaveMinAngle: 0
   shootWaveMaxAngle: 180
-  shootWaveIncrease: 10
+  shootWaveIncrease: 20
 --- !u!1 &4724918177657956829
 GameObject:
   m_ObjectHideFlags: 0

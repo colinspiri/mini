@@ -621,6 +621,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &753518961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753518963}
+  - component: {fileID: 753518962}
+  m_Layer: 0
+  m_Name: Grow Bullet Provider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &753518962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753518961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9987493d6336664cbf2be5c7ef2ef58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 650653895132575033, guid: 7421ec5c0e13e3145adb2f3e8db3024f, type: 3}
+  Headcount: 200
+--- !u!4 &753518963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753518961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047831528
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +789,7 @@ Transform:
   - {fileID: 286339568}
   - {fileID: 2045859278}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1160870902
 GameObject:
@@ -1140,10 +1186,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2811774710029749184, guid: dcff9e85b56e8464e9ecd793318fdb52, type: 3}
-      propertyPath: orthographic size
-      value: 6.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811774710029749184, guid: dcff9e85b56e8464e9ecd793318fdb52, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0.8195265
       objectReference: {fileID: 0}
@@ -1224,6 +1266,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4185758166547840691, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185758166547840691, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185758166547840691, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4547101196184645029, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1272,10 +1326,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giant
       objectReference: {fileID: 0}
+    - target: {fileID: 4992598238803307048, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992598238803307048, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9159008756087176981, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
       propertyPath: bulletProviderObject
       value: 
       objectReference: {fileID: 1748262450}
+    - target: {fileID: 9159008756087176981, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
+      propertyPath: growBulletProviderObject
+      value: 
+      objectReference: {fileID: 753518961}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b8419451e2bd946beedf550fa0866c, type: 3}
 --- !u!1001 &4672259260398323581
@@ -1289,14 +1355,6 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1957058758}
-    - target: {fileID: 4463006460113758526, guid: b81688148ccaf7d498a491b9a8756b2e, type: 3}
-      propertyPath: maxSize
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463006460113758526, guid: b81688148ccaf7d498a491b9a8756b2e, type: 3}
-      propertyPath: minSize
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4463006460113758526, guid: b81688148ccaf7d498a491b9a8756b2e, type: 3}
       propertyPath: maxCameraSize
       value: 15

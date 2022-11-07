@@ -15,6 +15,7 @@ public class Bullet : Actor {
     
     // state
     public bool belongsToPlayer;
+    public bool grow;
 
     float elapsedTime;
 
@@ -41,7 +42,8 @@ public class Bullet : Actor {
     private void OnTriggerEnter2D(Collider2D col) {
         if (!belongsToPlayer && col.gameObject.CompareTag("Player"))
         {
-            col.SendMessage("ApplyDamage");
+            if(grow) col.SendMessage("Grow");
+            else col.SendMessage("ApplyDamage");
             Die();
         }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GiantShoot : MonoBehaviour {
     public GameObject bulletProviderObject;
+    public GameObject growBulletProviderObject;
 
     [Header("Shoot At Player")]
     public Transform gunNozzle;
@@ -14,9 +15,11 @@ public class GiantShoot : MonoBehaviour {
     public float shootWaveMinAngle;
     public float shootWaveMaxAngle;
     public float shootWaveIncrease;
+    
 
     IProvider<Bullet> bulletProvider;
-    
+    IProvider<Bullet> growBulletProvider;
+
     // state
     private float shootAtPlayerCooldown;
     private float shootWaveCooldown;
@@ -26,6 +29,7 @@ public class GiantShoot : MonoBehaviour {
     void Start()
     {
         bulletProvider = bulletProviderObject.GetComponent<IProvider<Bullet>>();
+        growBulletProvider = growBulletProviderObject.GetComponent<IProvider<Bullet>>();
     }
 
     // Update is called once per frame
@@ -52,7 +56,12 @@ public class GiantShoot : MonoBehaviour {
     private void ShootAtPlayer() {
         Vector3 toPlayer = PlayerMovement.Instance.transform.position - transform.position;
         toPlayer.Normalize();
-        ShootBullet(gunNozzle.position, toPlayer);
+        
+        // random chance it's a grow bullet
+        if (Random.Range(0, 4) == 0) {
+            ShootGrowBullet(gunNozzle.position, toPlayer);
+        }
+        else ShootBullet(gunNozzle.position, toPlayer);
     }
 
     private void ShootWave() {
@@ -68,6 +77,13 @@ public class GiantShoot : MonoBehaviour {
 
     private void ShootBullet(Vector3 spawnPosition, Vector3 direction) {
         Bullet bullet = bulletProvider.Get();
+        bullet.transform.position = spawnPosition;
+        bullet.transform.rotation = Quaternion.identity;
+        bullet.belongsToPlayer = false;
+        bullet.direction = direction;
+    }
+    private void ShootGrowBullet(Vector3 spawnPosition, Vector3 direction) {
+        Bullet bullet = growBulletProvider.Get();
         bullet.transform.position = spawnPosition;
         bullet.transform.rotation = Quaternion.identity;
         bullet.belongsToPlayer = false;

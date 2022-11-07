@@ -8,11 +8,6 @@ public class PlayerSize : MonoBehaviour {
     public float maxSize;
     public float growSpeed;
     public float shrinkSpeed;
-    public KeyCode shrinkKey;
-
-    public Camera camera;
-    public float minCameraSize;
-    public float maxCameraSize;
 
     // Start is called before the first frame update
     void Start() {
@@ -33,6 +28,5 @@ public class PlayerSize : MonoBehaviour {
 
     private void UpdateSize() {
         transform.localScale = new Vector3(currentSize, currentSize, currentSize);
-        camera.orthographicSize = Mathf.Lerp(minCameraSize, maxCameraSize, (currentSize - minSize) / maxSize);
     }
 }

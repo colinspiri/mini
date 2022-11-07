@@ -124,7 +124,7 @@ MonoBehaviour:
   rb: {fileID: 6387233420969326469}
   speed: 40
   direction: {x: 0, y: 0, z: 0}
-  lifeTime: 3
+  lifeTime: 10
   belongsToPlayer: 0
 --- !u!61 &1328283382261856208
 BoxCollider2D:

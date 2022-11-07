@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hurtbox : MonoBehaviour
-{
-
+public class Hurtbox : MonoBehaviour {
+    public GiantHealth health;
+    public float damage;
     public float DamageEffectDuration;
     public AnimationCurve DamageEffectCurve;
 
@@ -20,7 +20,7 @@ public class Hurtbox : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(CR_PlayDamageEffect());
         StartCoroutine(CameraShake.Instance.Shake(0.05f));
-        //CameraMovement.ScreenShake(0.2f, 0.1f);
+        health.TakeDamage(damage);
     }
 
     IEnumerator CR_PlayDamageEffect()

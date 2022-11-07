@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 650653895132575032}
   - component: {fileID: 650653895132575033}
   m_Layer: 0
-  m_Name: EnemyBullet
+  m_Name: GrowBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.16030955, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,9 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbecf1ae7c62a743829f9ae59536d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  speed: 9
+  rb: {fileID: 6387233420969326469}
+  speed: 7
   direction: {x: 0, y: 0, z: 0}
   lifeTime: 10
   belongsToPlayer: 0
-  grow: 0
+  grow: 1

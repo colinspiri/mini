@@ -40,6 +40,7 @@ public class PlayerHealth : MonoBehaviour {
         if (currentHealth <= 0) {
             currentHealth = 0;
             // game over
+            GameOverManager.Instance.PlayerLose();
             Debug.Log("game over");
         }
     }

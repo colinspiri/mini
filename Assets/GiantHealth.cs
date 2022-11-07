@@ -19,6 +19,7 @@ public class GiantHealth : MonoBehaviour {
         slider.value = currentHealth / maxHealth;
         if (currentHealth <= 0) {
             Debug.Log("WIN!");
+            GameOverManager.Instance.PlayerWin();
         }
     }
 }
